@@ -91,13 +91,13 @@ const deleteComment = asyncHandler(async (req, res) => {
         throw new ApiError(401,"Only valid user can delete the comment")
     }
 
-    const newcomment = Comment.findByIdAndDelete(commentId)
+    await Comment.findByIdAndDelete(commentId)
 
-    if(!newcomment){
+    if(!comment){
         throw new ApiError(500,"Couldnt delete the comment")
     }
     return res.status(200)
-    .json(new ApiResponse(200,newcomment, "Comment deleted successfully"))
+    .json(new ApiResponse(200,{}, "Comment deleted successfully"))
 
 
 })
