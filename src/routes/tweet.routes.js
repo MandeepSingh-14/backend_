@@ -9,7 +9,7 @@ router.use(verifyJWT)
 router.route("/").post(createTweet)
 router.route("/user/:userId").get(getUserTweets)
 router.route("/:tweetId").patch(updateTweet)
-router.route("/:tweetId").patch(deleteTweet)
+router.route("/:tweetId").delete(deleteTweet)
 
 
 export default router
