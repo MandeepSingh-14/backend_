@@ -9,3 +9,4 @@ router.route("/toggle/cs/:channelId").get(getUserChannelSubscribers)
 router.route("/toggle/sc/:subscriberId").get(getSubscribedChannels)
 
 
+export default router
