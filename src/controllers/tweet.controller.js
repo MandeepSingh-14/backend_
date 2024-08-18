@@ -6,7 +6,6 @@ import {ApiResponse} from "../utils/ApiResponse.js"
 import {asyncHandler} from "../utils/asyncHandler.js"
 
 const createTweet = asyncHandler(async (req, res) => {
-    //TODO: create tweet
     const { content } = req.body
     
     if(!content || !content.trim().length ===0){
